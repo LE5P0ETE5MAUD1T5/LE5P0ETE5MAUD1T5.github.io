@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>샘플 채팅 게시글</title>
-  <link rel="stylesheet" href="../style.css"> <!-- index와 동일 CSS 사용 -->
+  <link rel="stylesheet" href="../../style.css"> <!-- 메인 폴더 두 단계 위 -->
   <style>
     /* Chat 전용 스타일 */
     .chat-window {
@@ -75,39 +75,80 @@
       font-size: 14px;
       box-sizing: border-box;
     }
+
+    /* 돌아가기 링크 가운데 */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <h2 style="text-align:center; color:#fff; margin-top:20px;">샘플 채팅 게시글</h2>
+  <div class="layout">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="dday-widget">
+        <h3>D - DAY</h3>
+        <p id="dday">Loading...</p>
+      </div>
+      <nav class="menu">
+        <a href="../../index.html">Home</a>
+        <a href="../../characters.html">Characters</a>
+        <a href="../../world.html">World</a>
+        <a href="../../archive.html">Archive</a>
+      </nav>
+    </aside>
 
-  <!-- 검색창 -->
-  <div class="chat-search">
-    <input type="text" id="chatSearch" placeholder="메시지 검색...">
+    <!-- 메인 영역 -->
+    <main class="main">
+      <h2 style="text-align:center; color:#fff; margin-top:20px;">샘플 채팅 게시글</h2>
+
+      <!-- 검색창 -->
+      <div class="chat-search">
+        <input type="text" id="chatSearch" placeholder="메시지 검색...">
+      </div>
+
+      <!-- 채팅창 -->
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-message partner">
+          <img class="avatar" src="../../images/partner.jpg" alt="Partner">
+          <div class="bubble">안녕! 오늘 일정 어때?</div>
+        </div>
+        <div class="chat-message user">
+          <div class="bubble">잘 지내! 지금 바로 작업 중이야.</div>
+          <img class="avatar" src="../../images/user.jpg" alt="User">
+        </div>
+        <div class="chat-message partner">
+          <img class="avatar" src="../../images/partner.jpg" alt="Partner">
+          <div class="bubble">좋아, 그러면 저녁에 이야기하자.</div>
+        </div>
+        <div class="chat-message user">
+          <div class="bubble">응, 알겠어!</div>
+          <img class="avatar" src="../../images/user.jpg" alt="User">
+        </div>
+      </div>
+
+      <a href="../../archive.html" class="back-link">← 돌아가기</a>
+    </main>
   </div>
 
-  <!-- 채팅창 -->
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-message partner">
-      <img class="avatar" src="../images/partner.jpg" alt="Partner">
-      <div class="bubble">안녕! 오늘 일정 어때?</div>
-    </div>
-    <div class="chat-message user">
-      <div class="bubble">잘 지내! 지금 바로 작업 중이야.</div>
-      <img class="avatar" src="../images/user.jpg" alt="User">
-    </div>
-    <div class="chat-message partner">
-      <img class="avatar" src="../images/partner.jpg" alt="Partner">
-      <div class="bubble">좋아, 그러면 저녁에 이야기하자.</div>
-    </div>
-    <div class="chat-message user">
-      <div class="bubble">응, 알겠어!</div>
-      <img class="avatar" src="../images/user.jpg" alt="User">
-    </div>
-    <!-- 추가 샘플 메시지 필요하면 여기 계속 복제 -->
-  </div>
-  <a href="/archive.html">← 돌아가기</a>
   <script>
+    // D-day 계산
+    const targetDate = new Date("2024-11-18");
+    const today = new Date();
+    const diff = targetDate - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("dday").innerText = 
+      days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
+
     // 검색 기능
     const searchInput = document.getElementById('chatSearch');
     const chatWindow = document.getElementById('chatWindow');
