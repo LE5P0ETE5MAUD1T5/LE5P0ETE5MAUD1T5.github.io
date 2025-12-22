@@ -1,37 +1,43 @@
-* {
+/* 1️⃣ 기본 스타일 */
+body {
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+/* 2️⃣ 레이아웃 */
+.layout {
+  display: flex;           /* 가로 레이아웃 */
+  min-height: 100vh;
+}
+
+/* 3️⃣ 사이드바 */
+.sidebar {
+  width: 220px;            /* 사이드바 너비 */
+  padding: 20px;
+  background: #222;        /* 배경색 */
   box-sizing: border-box;
 }
 
-body {
-  background: #111;
-  color: #eee;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+.sidebar .menu a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 8px 0;
 }
 
-.layout {
-  display: flex; /* 가로 레이아웃 */
+.sidebar .menu a:hover {
+  color: #fff;
 }
 
-.sidebar {
-  width: 200px;         /* 사이드바 너비 */
-  padding: 10px;
-  background: #111;     /* 배경색 */
-  color: #fff;          /* 글자 색 */
-}
-
-.main {
-  flex: 1;              /* 나머지 공간 차지 */
-  padding: 10px;
-}
-
-
-/* D-day 위젯 */
 .dday-widget {
   border: 1px solid #333;
   padding: 15px;
   text-align: center;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.5);
 }
 
 .dday-widget h3 {
@@ -43,65 +49,51 @@ body {
 .dday-widget p {
   font-size: 24px;
   font-weight: bold;
-}
-
-/* 메뉴 */
-.menu a {
-  display: block;
-  color: #ccc;
-  text-decoration: none;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-
-.menu a:hover {
   color: #fff;
 }
 
-/* 메인 영역 */
+/* 4️⃣ 메인 콘텐츠 */
 .main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;                /* 나머지 공간 차지 */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* 중앙 이미지 */
+/* 5️⃣ Hero 이미지 */
 .hero {
   position: relative;
-  width: 70%;
-  max-width: 900px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .hero img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  display: block;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
-/* 이미지 위 텍스트 */
 .hero-text {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 15px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 6px #000;
 }
 
 .hero-text h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
+  margin: 0;
+  font-size: 36px;
 }
 
 .hero-text p {
-  font-size: 14px;
-  color: #ccc;
+  margin: 5px 0 0 0;
+  font-size: 18px;
 }
 
-/* 게시판 */
+/* 6️⃣ 게시판 */
 .archive {
-  padding: 30px;
+  padding: 20px 0;
 }
 
 .archive h2 {
