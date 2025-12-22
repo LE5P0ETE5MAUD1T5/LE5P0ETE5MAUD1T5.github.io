@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Private Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="dday-widget">
+        <h3>D - DAY</h3>
+        <p id="dday">Loading...</p>
+      </div>
+
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">Characters</a>
+        <a href="#">World</a>
+        <a href="#">Archive</a>
+      </nav>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main">
+      <div class="hero">
+        <img src="images/main.jpg" alt="Main Image" />
+        <div class="hero-text">
+          <h1>LE5P0ETE5MAUD1T5</h1>
+          <p>Characters · Stories · Roleplay</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- D-day 계산 스크립트 -->
+  <script>
+ 
+    const targetDate = new Date("2024-11-18");
+    const today = new Date();
+    const diff = targetDate - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("dday").innerText = 
+      days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
+  </script>
+
+</body>
+</html>
