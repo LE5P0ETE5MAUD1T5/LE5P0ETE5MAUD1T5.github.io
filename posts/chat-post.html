@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>샘플 채팅 게시글</title>
+  <link rel="stylesheet" href="../style.css"> <!-- index와 동일 CSS 사용 -->
+  <style>
+    /* Chat 전용 스타일 */
+    .chat-window {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #1e1e1e;
+      border-radius: 10px;
+      padding: 15px;
+      height: 500px;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    .chat-message {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: flex-end;
+    }
+
+    .chat-message.user {
+      justify-content: flex-end;
+    }
+
+    .chat-message.partner {
+      justify-content: flex-start;
+    }
+
+    .chat-message .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .chat-message .bubble {
+      max-width: 60%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #333;
+      color: #fff;
+      word-wrap: break-word;
+    }
+
+    .chat-message.user .bubble {
+      background: #4a90e2;
+      color: #fff;
+      border-bottom-right-radius: 0;
+    }
+
+    .chat-message.partner .bubble {
+      background: #555;
+      color: #fff;
+      border-bottom-left-radius: 0;
+    }
+
+    /* 검색창 */
+    .chat-search {
+      max-width: 700px;
+      margin: 0 auto 10px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .chat-search input {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center; color:#fff; margin-top:20px;">샘플 채팅 게시글</h2>
+
+  <!-- 검색창 -->
+  <div class="chat-search">
+    <input type="text" id="chatSearch" placeholder="메시지 검색...">
+  </div>
+
+  <!-- 채팅창 -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-message partner">
+      <img class="avatar" src="../images/partner.jpg" alt="Partner">
+      <div class="bubble">안녕! 오늘 일정 어때?</div>
+    </div>
+    <div class="chat-message user">
+      <div class="bubble">잘 지내! 지금 바로 작업 중이야.</div>
+      <img class="avatar" src="../images/user.jpg" alt="User">
+    </div>
+    <div class="chat-message partner">
+      <img class="avatar" src="../images/partner.jpg" alt="Partner">
+      <div class="bubble">좋아, 그러면 저녁에 이야기하자.</div>
+    </div>
+    <div class="chat-message user">
+      <div class="bubble">응, 알겠어!</div>
+      <img class="avatar" src="../images/user.jpg" alt="User">
+    </div>
+    <!-- 추가 샘플 메시지 필요하면 여기 계속 복제 -->
+  </div>
+
+  <script>
+    // 검색 기능
+    const searchInput = document.getElementById('chatSearch');
+    const chatWindow = document.getElementById('chatWindow');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      const messages = chatWindow.getElementsByClassName('chat-message');
+
+      Array.from(messages).forEach(msg => {
+        const text = msg.querySelector('.bubble').innerText.toLowerCase();
+        msg.style.display = text.includes(filter) ? 'flex' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
