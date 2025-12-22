@@ -208,3 +208,76 @@ body.main-landing {
   letter-spacing: 1px;
 }
 
+.category-card {
+  position: relative;
+  width: 160px;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.category-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+
+.overlay-caption {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+}
+
+.category-card:hover .overlay-caption {
+  opacity: 1;
+}
+
+.overlay-caption h3 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.overlay-caption p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+
+/* Characters */
+.category-card.characters {
+  box-shadow: 0 0 0 1px rgba(180, 80, 80, 0.6);
+}
+
+/* World */
+.category-card.world {
+  box-shadow: 0 0 0 1px rgba(80, 120, 180, 0.6);
+}
+
+/* Archive */
+.category-card.archive {
+  box-shadow: 0 0 0 1px rgba(120, 120, 120, 0.6);
+}
+
+/* Extra */
+.category-card.extra {
+  box-shadow: 0 0 0 1px rgba(140, 100, 160, 0.6);
+}
+
