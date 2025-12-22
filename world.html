@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>저주받은 시인들 - Characters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="dday-widget">
+        <h3>D - DAY</h3>
+        <p id="dday">Loading...</p>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="world.html">World</a>
+        <a href="archive.html">Archive</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="archive">
+        <h2>World Archive</h2>
+        <div class="post-list">
+          <div class="post-item">
+            <a href="posts/world/world1.html">
+              <img src="images/world1.jpg" alt="World 1">
+              <p>World Story</p>
+            </a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+  </div>
+
+  <script>
+    const targetDate = new Date("2024-11-18");
+    const today = new Date();
+    const diff = targetDate - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("dday").innerText = 
+      days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
+  </script>
+</body>
+</html>
