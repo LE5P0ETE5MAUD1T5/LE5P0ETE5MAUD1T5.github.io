@@ -4,11 +4,76 @@
   <meta charset="UTF-8">
   <title>상단제목</title>
   <link rel="stylesheet" href="../../style.css">
+ <style>
+    /* 돌아가기 링크 가운데 */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* World 콘텐츠 기본 스타일 */
+    .content img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>찐제목</h1>
-  <p>캐릭터 소개 내용</p>
-  <img src="../images/char1.jpg" alt="Character 1">
-  <a href="/characters.html">← 돌아가기</a>
+
+  <div class="layout">
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <div class="dday-widget">
+        <h3>D - DAY</h3>
+        <p id="dday">Loading...</p>
+      </div>
+      <nav class="menu">
+        <a href="../index.html">Home</a>
+        <a href="../characters.html">Characters</a>
+        <a href="../world.html">World</a>
+        <a href="../archive.html">Archive</a>
+      </nav>
+    </aside>
+
+    <!-- 메인 영역 -->
+    <main class="main">
+      <h2 style="text-align:center; color:#fff; margin-top:20px;">World 1</h2>
+
+      <div class="content">
+        <img src="../images/sample1.jpg" alt="World Image">
+        <p>여기에 World 1 관련 설명이나 이미지, 텍스트를 넣으세요.</p>
+        <p>추가 텍스트나 다른 이미지도 자유롭게 추가 가능.</p>
+      </div>
+
+      <!-- 돌아가기 링크 -->
+      <a href="../world.html" class="back-link">← 돌아가기</a>
+    </main>
+  </div>
+
+  <script>
+    // D-day 계산
+    const targetDate = new Date("2024-11-18");
+    const today = new Date();
+    const diff = targetDate - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("dday").innerText = 
+      days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
+  </script>
+
 </body>
 </html>
