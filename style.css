@@ -97,3 +97,40 @@ body {
   font-size: 14px;
   color: #ccc;
 }
+
+/* 게시판 */
+.archive {
+  padding: 30px;
+}
+
+.archive h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post-item {
+  width: 150px;
+  text-align: center;
+  background: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.post-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-item p {
+  padding: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
