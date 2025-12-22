@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>저주받은 시인들</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>LE5P0ETE5MAUD1T5</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <div class="layout">
-    <aside class="sidebar">      <!--왼쪽 사이드바 -->
-      <div class="dday-widget">
-        <h3>D - DAY</h3>
-        <p id="dday">Loading...</p>
-      </div>
+<body class="main-landing">
 
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="characters.html">Characters</a>
-        <a href="world.html">World</a>
-        <a href="archive.html">Archive</a>
-      </nav>
-    </aside> <!--사이드바 끝 -->
-    
-    <main class="main">    <!--메인 콘텐츠 --> 
-      <div class="hero">   
-        <img src="images/main.jpg" alt="Main Image">
-        <div class="hero-text">
-          <h1>LE5P0ETE5MAUD1T5</h1>
-          <p>Characters · Stories · Roleplay</p>
-        </div>
-      </div>
+  <div class="overlay">
 
-  <!-- 이밑으로 게시판 영역 등 다른 콘텐츠 추가 -->
-  <section class="chat archive">
-    <h2>채팅아카이브</h2>
-    <div class="post-list">
-      <div class="post-item">
-        <a href="posts/sample-post.html">
-          <img src="images/sample1.jpg" alt="Sample 1">
-          <p>채팅 아카이브글</p> 
-        </a>
-      </div>
-      <div class="post-item">
-        <a href="posts/sample-post.html">
-          <img src="images/sample2.jpg" alt="Sample 2">
-          <p>다른 제목 2</p>
-        </a>
-      </div>
+    <!-- 제목 + 디데이 -->
+    <header class="main-header">
+      <h1>LE5P0ETE5MAUD1T5</h1>
+      <p id="dday">D-Loading</p>
+    </header>
+
+    <!-- 인용구 -->
+    <div class="quote">
+      <p>
+        “They’ll need a friend, but never a saviour.”
+      </p>
     </div>
-  </section>
 
- </main>  <!-- 메인 끝 -->
+    <!-- 카테고리 카드 -->
+    <section class="category-grid">
+      <a href="characters.html" class="category-card">
+        <img src="images/char.jpg" alt="Characters">
+        <span>Characters</span>
+      </a>
 
-</div>  <!-- 레이아웃 끝 -->
+      <a href="world.html" class="category-card">
+        <img src="images/world.jpg" alt="World">
+        <span>World</span>
+      </a>
 
-  <!-- D-day 계산 스크립트 -->
+      <a href="archive.html" class="category-card">
+        <img src="images/archive.jpg" alt="Archive">
+        <span>Archive</span>
+      </a>
+
+      <a href="extra.html" class="category-card">
+        <img src="images/extra.jpg" alt="Extra">
+        <span>Extra</span>
+      </a>
+    </section>
+
+  </div>
+
+  <!-- D-day -->
   <script>
- 
     const targetDate = new Date("2024-11-18");
     const today = new Date();
     const diff = targetDate - today;
     const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-    document.getElementById("dday").innerText = 
+    document.getElementById("dday").innerText =
       days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
   </script>
 
