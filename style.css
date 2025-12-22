@@ -281,3 +281,58 @@ body.main-landing {
   box-shadow: 0 0 0 1px rgba(140, 100, 160, 0.6);
 }
 
+/* =========================
+   TIME WIDGET
+========================= */
+
+.time-widget {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+.time-block {
+  text-align: center;
+  min-width: 140px;
+}
+
+.time-block h4 {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.time-block .date {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.time-block .time {
+  font-size: 22px;
+  margin: 4px 0 0 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 가운데 구분선 */
+.time-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255,255,255,0.2);
+}
+
+.time-caption {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
