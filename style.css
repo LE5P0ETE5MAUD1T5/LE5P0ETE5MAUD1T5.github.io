@@ -143,7 +143,7 @@ body {
 .overlay {
   width: 90%;           /* 화면 가로의 90% */
   max-width: 1200px;    /* 너무 커지지 않게 */
-  height: auto;          /* 카드 내용 따라 유동적 */
+  height: 60%;          /* 카드 내용 따라 유동적 */
   background: rgba(0,0,0,0.65);
   margin: 50px auto;     /* 위쪽 여유 */
   padding: 30px 20px;
