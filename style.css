@@ -10,21 +10,22 @@ body {
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
 }
 
-/* 전체 레이아웃 */
 .layout {
-  display: flex;
-  min-height: 100vh;
+  display: flex; /* 가로 레이아웃 */
 }
 
-/* 왼쪽 사이드바 */
 .sidebar {
-  width: 220px;
-  background: #181818;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  width: 200px;         /* 사이드바 너비 */
+  padding: 10px;
+  background: #111;     /* 배경색 */
+  color: #fff;          /* 글자 색 */
 }
+
+.main {
+  flex: 1;              /* 나머지 공간 차지 */
+  padding: 10px;
+}
+
 
 /* D-day 위젯 */
 .dday-widget {
