@@ -59,6 +59,23 @@
   </a>
 
 </section>
+    
+<!-- 시간 위젯 -->
+<section class="time-widget">
+  <div class="time-block">
+    <h4>KOREA</h4>
+    <p class="date" id="kr-date"></p>
+    <p class="time" id="kr-time"></p>
+  </div>
+
+  <div class="time-divider"></div>
+
+  <div class="time-block">
+    <h4>CALGARY</h4>
+    <p class="date" id="ca-date"></p>
+    <p class="time" id="ca-time"></p>
+  </div>
+</section>
 
   </div>
 
@@ -72,5 +89,40 @@
       days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
   </script>
 
+<script>
+  function updateTime() {
+    const now = new Date();
+
+    // 한국 시간
+    const kr = new Date(
+      now.toLocaleString("en-US", { timeZone: "Asia/Seoul" })
+    );
+
+    // 캘거리 시간
+    const ca = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Edmonton" })
+    );
+
+    const formatDate = d =>
+      d.getFullYear() + "." +
+      String(d.getMonth() + 1).padStart(2, "0") + "." +
+      String(d.getDate()).padStart(2, "0");
+
+    const formatTime = d =>
+      String(d.getHours()).padStart(2, "0") + ":" +
+      String(d.getMinutes()).padStart(2, "0");
+
+    document.getElementById("kr-date").innerText = formatDate(kr);
+    document.getElementById("kr-time").innerText = formatTime(kr);
+
+    document.getElementById("ca-date").innerText = formatDate(ca);
+    document.getElementById("ca-time").innerText = formatTime(ca);
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000); // 1분마다 갱신
+</script>
+
+  
 </body>
 </html>
