@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  color: #eee;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+/* 전체 레이아웃 */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 왼쪽 사이드바 */
+.sidebar {
+  width: 220px;
+  background: #181818;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* D-day 위젯 */
+.dday-widget {
+  border: 1px solid #333;
+  padding: 15px;
+  text-align: center;
+}
+
+.dday-widget h3 {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.dday-widget p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 메뉴 */
+.menu a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* 메인 영역 */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 중앙 이미지 */
+.hero {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* 이미지 위 텍스트 */
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+}
+
+.hero-text h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  color: #ccc;
+}
