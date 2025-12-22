@@ -153,6 +153,9 @@ body {
   align-items: center;     /* 가로 중앙 정렬 */
 }
 
+.overlay {
+  overflow-y: auto; /* 내용 넘치면 스크롤 */
+}
 
 
 /* =======================
