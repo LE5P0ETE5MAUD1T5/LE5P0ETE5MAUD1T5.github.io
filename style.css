@@ -141,13 +141,19 @@ body {
 
 /* 반투명 검은 상자 */
 .overlay {
-  background: rgba(0, 0, 0, 0.65);
-  width: 70%;
-  height: 70%;
-  padding: 60px 40px;
-  box-sizing: border-box;
-  color: #fff;
+  width: 90%;           /* 화면 가로의 90% */
+  max-width: 1200px;    /* 너무 커지지 않게 */
+  height: auto;          /* 카드 내용 따라 유동적 */
+  background: rgba(0,0,0,0.65);
+  margin: 50px auto;     /* 위쪽 여유 */
+  padding: 30px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;  /* 세로 정렬 */
+  align-items: center;     /* 가로 중앙 정렬 */
 }
+
+
 
 /* =======================
    CONTENT OVERLAY
