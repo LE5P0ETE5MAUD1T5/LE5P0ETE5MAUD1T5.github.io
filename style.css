@@ -16,6 +16,7 @@ body {
 .sidebar {
   width: 220px;            /* 사이드바 너비 */
   padding: 20px;
+  color: #fff; 
   background: #222;        /* 배경색 */
   box-sizing: border-box;
 }
