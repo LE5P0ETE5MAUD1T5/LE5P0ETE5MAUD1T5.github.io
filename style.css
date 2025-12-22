@@ -130,15 +130,14 @@ body {
 }
 
 /* =========================
-   MAIN LANDING PAGE
+   GLOBAL BACKGROUND
 ========================= */
 
-body.main-landing {
-  margin: 0;
-  height: 100vh;
-  background: url("images/background.jpg") no-repeat center center / cover;
-  font-family: Arial, sans-serif;
+body {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
 
 /* 반투명 검은 상자 */
 .overlay {
