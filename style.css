@@ -218,7 +218,7 @@ body {
 .category-card {
   position: relative;
   width: 160px;
-  height: 260px;
+  height: 260px !important;  
   text-decoration: none;
   overflow: hidden; 
   color: #fff;
