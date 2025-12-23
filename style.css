@@ -144,7 +144,7 @@ body {
 .overlay {
   width: 80%;           /* 화면 가로의 90% */
   max-width: 1200px;    /* 너무 커지지 않게 */
-  height: 80vh;          
+  height: 95vh;          
   background: rgba(0,0,0,0.65);
   margin: 50px auto;     /* 위쪽 여유 */
   padding: 30px 20px;
