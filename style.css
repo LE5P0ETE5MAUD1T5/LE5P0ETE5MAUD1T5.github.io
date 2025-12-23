@@ -314,7 +314,6 @@ body {
   
   width: 400px;
   height: 80px;
-  background: #111;
   border-radius: 6px;
   overflow: visible;
   z-index: 10;
@@ -342,7 +341,8 @@ body {
   flex-direction: column;
   justify-content: space-between; /* 이미 있음 */
   min-height: 60px;              /* 최소 높이 확보 */
-  overflow: visible;            
+  overflow: visible; 
+  border-radius: 6px;
 }
 
 .bgm-info button {
