@@ -199,6 +199,8 @@ body {
 /* 카테고리 카드 */
 .category-grid {
   display: flex;
+  width: 730px;
+  height: 260px;
   justify-content: center;
   gap: 30px;
 }
