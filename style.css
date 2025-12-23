@@ -306,7 +306,7 @@ body {
 .main-bgm {
   position: absolute;      /* 위치 고정 */
   bottom: 50px;            /* 화면 하단에서 50px */
-  left: 80px;              /* 왼쪽 여백 */
+  left: 70px;              /* 왼쪽 여백 */
 
   display: flex;
   justify-content: flex-start; /* 내부 아이템 좌정렬 */
@@ -320,7 +320,7 @@ body {
 }
 
 .bgm-thumb {
-  width: 90px;
+  width: 95px;
   height: 100%; 
 }
 
