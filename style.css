@@ -9,6 +9,7 @@ body {
 /* 2️⃣ 레이아웃 */
 .layout {
   display: flex;           /* 가로 레이아웃 */
+    flex-direction: row;    /* 사이드바 왼쪽, 메인 오른쪽 */
   min-height: 100vh;
 }
 
