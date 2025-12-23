@@ -25,11 +25,9 @@
   <div class="bgm-toggle-vertical">
     <button onclick="toggleBGM()">♫</button>
   </div>
-</div>
-
 <audio id="bgm" preload="metadata"></audio>
 <script src="js/bgm.js"></script>
-    </aside>
+</aside>
 
     <main class="main">
       <section class="archive">
@@ -41,19 +39,32 @@
               <p>Character 1</p>
             </a>
           </div>
+        <div class="post-item">
+            <a href="posts/chat-post.html">
+              <img src="images/sample2.jpg" alt="Sample Story 2">
+              <p>Sample story 2</p>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-  </div>
+  </div> <!-- layout 끝 -->
+</div> <!-- content-overlay 끝 -->
 
-  <script>
-    const targetDate = new Date("2024-11-18");
-    const today = new Date();
-    const diff = targetDate - today;
-    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-    document.getElementById("dday").innerText = 
-      days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
-  </script>
+<!-- 오디오 태그 -->
+<audio id="bgm" preload="metadata"></audio>
+<script src="js/bgm.js"></script>
+
+<!-- D-day 계산 -->
+<script>
+  const targetDate = new Date("2024-11-18");
+  const today = new Date();
+  const diff = targetDate - today;
+  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("dday").innerText = 
+    days >= 0 ? `D-${days}` : `D+${Math.abs(days)}`;
+</script>
+
 </body>
 </html>
