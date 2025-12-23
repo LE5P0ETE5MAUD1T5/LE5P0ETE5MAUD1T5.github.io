@@ -85,24 +85,26 @@
 
 </section>
 
-       <!-- 메인 BGM 플레이어 -->
-      <div class="bgm-player main-bgm">
-        <div class="bgm-thumb"><img src="images/bgm-thumb1.jpg" alt="BGM Thumbnail"></div>
-        <div class="bgm-info">
-          <p class="bgm-title"> Playlist</p>
-          <p class="bgm-artist"> Musical Rimbaud</p>
-          <div class="bgm-controls">
-            <button onclick="toggleBGM()">▶ / ❚❚</button>
-            <button onclick="nextTrack()">⏭</button>
-          </div>
-        </div>
-      </div>
-
- <!-- 오디오 태그 (모든 페이지 공통) -->
-  <audio id="bgm" preload="metadata"></audio>
-  <script src="js/bgm.js"></script>
+    <!-- 메인 BGM 플레이어 -->
+<div class="main-bgm"> <!-- ← bgm-player 제거 (여기 바뀜) -->
+  <div class="bgm-thumb">
+    <img src="images/bgm-thumb1.jpg" alt="BGM Thumbnail">
   </div>
 
+  <div class="bgm-info">
+    <p class="bgm-title">Playlist</p>
+    <p class="bgm-artist">Musical Rimbaud</p>
+
+    <div class="bgm-controls">
+      <button onclick="toggleBGM()">▶ / ❚❚</button>
+      <button onclick="nextTrack()">⏭</button>
+    </div>
+  </div>
+</div>
+
+<!-- 오디오 태그 -->
+<audio id="bgm" preload="metadata"></audio>
+<script src="js/bgm.js"></script>
 
   
   <!-- D-day -->
