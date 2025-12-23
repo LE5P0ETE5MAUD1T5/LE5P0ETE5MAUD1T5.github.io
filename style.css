@@ -61,37 +61,6 @@ body {
   box-sizing: border-box;
 }
 
-/* 5️⃣ Hero 이미지 */
-.hero {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-shadow: 2px 2px 6px #000;
-}
-
-.hero-text h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-.hero-text p {
-  margin: 5px 0 0 0;
-  font-size: 18px;
-}
 
 /* 6️⃣ 게시판 */
 .archive {
@@ -144,7 +113,7 @@ body {
 .overlay {
   width: 80%;           /* 화면 가로의 90% */
   max-width: 1200px;    /* 너무 커지지 않게 */
-  height: 95vh;          
+  height: 100vh;          
   background: rgba(0,0,0,0.65);
   margin: 50px auto;     /* 위쪽 여유 */
   padding: 30px 20px;
