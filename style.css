@@ -269,6 +269,11 @@ body {
   color: #ccc;
 }
 
+/* 아카이브 카드 전용 클래스 제거 또는 통합 */
+.category-card.archive {
+  width: 160px;   /* 기본값과 동일 */
+  height: 260px;  /* 기본값과 동일 */
+}
 
 /* Characters */
 .category-card.characters {
