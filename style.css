@@ -320,8 +320,8 @@ body {
 }
 
 .bgm-thumb {
-  width: 100px;
-  height: 100%; 
+  width: 124px;
+  height: 124px; 
 }
 
 .bgm-thumb img {
@@ -358,6 +358,7 @@ flex-shrink: 0;       /* 최소 높이를 유지 */
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 16px;
+  margin: 5px 0;  
 }
 
 .bgm-wrapper {
