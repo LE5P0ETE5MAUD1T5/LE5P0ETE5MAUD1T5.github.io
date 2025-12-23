@@ -313,14 +313,14 @@ body {
   align-items: center;         /* 세로 중앙 정렬 */
   
   width: 400px;
-  height: 80px;
+  height: 100px;
   border-radius: 6px;
   overflow: visible;
   z-index: 10;
 }
 
 .bgm-thumb {
-  width: 95px;
+  width: 100px;
   height: 100%; 
 }
 
@@ -356,6 +356,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  max-height: 100%;
 }
 
 .bgm-wrapper {
