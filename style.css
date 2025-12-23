@@ -347,6 +347,21 @@ body {
   padding-bottom: 30px;          /* 화면 바닥 여백 */
 }
 
+.bgm-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.bgm-controls button {
+  background: #111;     /* 검은 배경 */
+  color: #fff;          /* 흰 글자 */
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 /* 사이드바 BGM 토글 */
 .bgm-toggle-vertical {
   margin-top: auto;
