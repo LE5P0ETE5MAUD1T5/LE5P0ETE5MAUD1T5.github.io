@@ -310,7 +310,7 @@ body {
   height: 80px;
   background: #111;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: visible;
   z-index: 10;
 }
 
