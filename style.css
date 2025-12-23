@@ -306,7 +306,7 @@ body {
 .main-bgm {
   position: absolute;      /* 위치 고정 */
   bottom: 50px;            /* 화면 하단에서 50px */
-  left: 30px;              /* 왼쪽 여백 */
+  left: 80px;              /* 왼쪽 여백 */
 
   display: flex;
   justify-content: flex-start; /* 내부 아이템 좌정렬 */
@@ -320,7 +320,7 @@ body {
 }
 
 .bgm-thumb {
-  width: 80px;
+  width: 90px;
   height: 100%; 
 }
 
@@ -335,14 +335,14 @@ body {
   flex: 1;
   height: 100%;               /* 썸네일과 동일 높이 */
   background: rgba(0,0,0,0.5);
-  padding: 8px;
+  padding: 4px 8px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 이미 있음 */
+  justify-content: center;
   min-height: 60px;              /* 최소 높이 확보 */
   overflow: visible; 
-  border-radius: 6px;
+  border-radius:  0 6px 6px 0;
 }
 
 .bgm-info button {
@@ -352,7 +352,7 @@ body {
 
 .bgm-title,
 .bgm-artist {
-  white-space: nowrap;           /* 한 줄씩만 표시 */
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
