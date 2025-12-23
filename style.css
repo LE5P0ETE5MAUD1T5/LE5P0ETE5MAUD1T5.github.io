@@ -175,7 +175,7 @@ body {
 
 .main-header h1 {
   font-family: 'Georgia', serif; /* 글씨체 */
-  color: #ffcc00;                /* 글자 색 */
+  color: #1f5e88;                /* 글자 색 */
   font-size: 48px;               /* 크기 */
   font-weight: bold;             /* 굵기 */
   text-align: center;            /* 가운데 정렬 */
@@ -351,6 +351,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
 
 .bgm-wrapper {
   display: flex;
@@ -402,7 +403,7 @@ body {
   align-items: center;
   gap: 40px;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 50px auto;
   flex-wrap: nowrap;
 }
