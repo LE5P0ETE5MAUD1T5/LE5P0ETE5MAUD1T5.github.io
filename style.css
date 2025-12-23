@@ -333,12 +333,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;   /* 내부 요소 넘침 방지 */
 }
 
 .bgm-info button {
   align-self: flex-end;
   cursor: pointer;
 }
+
+.bgm-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* 최대 2줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+}
+
 
 .bgm-wrapper {
   display: flex;
