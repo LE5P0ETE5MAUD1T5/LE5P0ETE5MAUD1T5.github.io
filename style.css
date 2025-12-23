@@ -324,8 +324,8 @@ body {
 }
 
 .bgm-thumb img {
-  width: 100px !important;   /* ← 여기 바뀜 */
-  height: 100px !important;  /* ← 여기 바뀜 */
+  width: 122px !important;   /* ← 여기 바뀜 */
+  height: 122px !important;  /* ← 여기 바뀜 */
   max-width: none !important;/* ← 여기 바뀜 */
   max-height: none !important;
   object-fit: cover;
