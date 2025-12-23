@@ -357,7 +357,7 @@ body {
   width: 400px;
   height: 124px;
   border-radius: 6px;
-  overflow: visible;
+  overflow: hidden;
   z-index: 10;
 }
 
@@ -382,6 +382,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0
   min-height: 60px;              /* 최소 높이 확보 */
   overflow: visible; 
   border-radius:  0 6px 6px 0;
@@ -394,7 +395,7 @@ body {
 
 .bgm-title,
 .bgm-artist {
-flex-shrink: 0;       /* 최소 높이를 유지 */
+flex-shrink: 1;       /* 최소 높이를 유지 */
   line-height: 1.2;     /* 텍스트 높이 확보 */
   white-space: nowrap;
   overflow: hidden;
@@ -404,7 +405,7 @@ flex-shrink: 0;       /* 최소 높이를 유지 */
 }
 
 .bgm-wrapper {
-  display: flex;
+  display: block;
   justify-content: flex-start;   /* 왼쪽 */
   margin-top: 40px;
   padding-bottom: 30px;          /* 화면 바닥 여백 */
